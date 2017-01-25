@@ -1,0 +1,83 @@
+.contact-line{
+	padding: 60px 0px 1px 0px;
+	.limiter-container{
+		max-width: 960px;
+	}
+	.text{
+		padding-right: @padding*2;
+		width: 45%;
+		.responsive(@smartphones, {
+			display: block;
+			margin-bottom: @padding;
+			width: 100%;
+		});
+		p{
+			padding-left: @padding;
+			text-align: justify;
+		}
+		span{
+			display: inline-block;
+			width: 62px;
+		}
+	}
+	.form{
+		position: relative;
+		.inputs{
+			padding-right: @padding*.5;
+			width: 50%;
+			input{
+				margin-bottom: @padding*.5;
+				&:last-child{
+					margin: 0px;
+				}
+			}
+		}
+		.message{
+			width: 50%;
+			textarea{
+				height: 93px;
+			}
+		}
+		button{
+			@this-dimentions: @padding*4;
+            background-color: #F7CE10;
+			border: 0px;
+			border-radius: 50%;
+			bottom: 0px;
+			font-size: 0px;
+			height: @this-dimentions;
+			outline: none;
+			padding: 4px;
+			position: absolute;
+			right: 0px;
+			transform: translate(20%, 20%);
+			width: @this-dimentions;
+			.responsive(@tablets, {
+				transform: translate(-20%, 40%);
+			});
+			span{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.responsive(@smartphones, {
+			display: block;
+			.inputs, .message{
+				display: block;
+				padding: 0px;
+				width: 100%;
+			}
+			.message{
+				margin-top: @padding*.5;
+			}
+		});
+	}
+}
+
+.icon-form-contact{
+	margin-right: 25%;
+	.responsive(@smartphones,{
+		margin-right: 38% !important;
+		});
+}

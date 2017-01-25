@@ -1,0 +1,125 @@
+.principal-footer{
+	@this-max-width: @max-width - @padding*2;
+    .box-footer{
+        padding: 0 8em;
+        .responsive(@smartphones,{
+            padding: 0;
+        })
+    }
+    .contact-area{
+        border: solid 1px @color-gray;
+        padding-left: 20px;
+		padding-bottom: @padding*2;
+		width: 25%;
+		.limiter-container{
+			display: inline-block;
+			max-width: @this-max-width*0.4;
+			text-align: left;
+		}
+		header{
+			margin-bottom: @padding*.5;
+			padding: @padding*1 0px;
+			text-align: right;
+			h1{
+				display: inline-block;
+				font-size: 1em;
+				font-weight: 600;
+				margin: 0px;
+				span{
+					display: inline-block;
+					height: 42px;
+					margin-right: @padding*.5;
+					vertical-align: middle;
+					width: 42px;
+				}
+			}
+		}
+		.info-contact{
+			
+			margin-bottom: @padding*.5;
+			text-align: right;
+			h2{
+				font-size: 1.5em;
+				margin: 0px;
+			}
+			p{
+				margin: 0px;
+                margin-top: -2px;
+			}
+			strong{
+                font-style: italic;
+				font-weight: 600;
+			}
+		}
+	}
+	.contact-colaborations{
+		text-align: center;
+		width: 60%;
+		.limiter-container{
+			padding: 0 2%;
+		}
+        .line-pink{
+            background: #d8448f;
+            color: #fff;
+            font-size: 22px;
+            font-style: normal;
+            padding: 10px 0;
+            margin-left: 0px;
+            margin-top: 0px;
+            .responsive(@smartphones,{
+              margin-left: -12px;
+              margin-right: -12px;
+                margin-top: 60px;
+            });
+        }
+	}
+
+	.responsive(@smartphones, {
+		.contact-area, .contact-colaborations{
+			display: block;
+			width: 100%;
+			.limiter-container{
+				max-width: 100%;
+				padding: 0px @padding;
+				width: 100%;
+			}
+		}
+		.contact-colaborations{
+			padding-bottom: @padding;
+			.line{
+				width: 33.33333%;
+			}
+			h2{
+				font-size: .8em;
+			}
+			img{
+				width: 100%;
+			}
+			.logo{
+				padding: 0px @padding*.75;
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	});
+}
+.icon-footer {
+   display: inline;
+    float: right;
+    margin-right: 40px;
+    margin-top: 15px;
+    .responsive(@smartphones,{
+       margin-top: -20px; 
+    });
+}
+
+.icon-foo {
+    width: 40px;
+}
+
+.logo-footer {
+    max-height: 90px;
+    max-width: 130px;
+    margin-left: 14%;
+}

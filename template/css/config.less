@@ -1,0 +1,41 @@
+@import url(fonts.less);
+
+// FONTS
+@font-text: 'Noto Sans', sans-serif;
+@font-size: 14px;
+
+/**** DIMENTIOS ****/
+@max-width: 1020px;
+@padding: 12px;
+
+/**** PATHS ****/
+@path-images: '../images';
+
+// COLORS
+@color-brow: #575756;
+@color-gray-light: fadeout(@color-brow, 90%);
+@color-gray: fadeout(@color-brow, 75%);
+@color-white: #FFFFFF;
+@color-yellow: #F7CE10;
+
+// TRANSPARENCIES
+@transparent-dark: 20%;
+@transparent-light: 50%;
+
+/**** RESPONSIVE ****/
+@deviceSmall: 480px;
+@smartphones: 768px;
+@tablets: 992px;
+@notebook: 1200px;
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+/**** RETINA ****/
+.retina(@rules){
+	@media only screen and (-webkit-min-device-pixel-ratio: 2){
+		@rules();
+	}
+}
